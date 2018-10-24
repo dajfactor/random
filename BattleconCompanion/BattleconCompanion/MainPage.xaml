@@ -9,38 +9,43 @@
         <!--<Label Text="Welcome to Xamarin.Forms!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />-->
-        <Button x:Name="p1Life" 
+        
+
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="p1Life" 
                 Text="-" IsEnabled="true" 
                 Command="{Binding DamagePlayer}"
                 CommandParameter="0"/>
-        
-        <Button 
+
+            <Label Text="{Binding Players[0].LifeTotal}" />
+
+            <Button 
                 Text="+" IsEnabled="true" 
                 Command="{Binding HealPlayer}"
                 CommandParameter="0"/>
-
-        <StackLayout Orientation="Horizontal">
-            <Label Text="{Binding Players[0].LifeTotal}" />
-
-            <Label Text="{Binding Players[1].LifeTotal}" />
         </StackLayout>
+        
         <StackLayout Orientation="Horizontal">
             <Label Text="{Binding Players[0].CurrentForce}" />
+
+            <Label Text="{Binding ForceRemaining}" />
 
             <Label Text="{Binding Players[1].CurrentForce}" />
         </StackLayout>
 
-        <Button x:Name="p2Life" 
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="p2Life" 
                 Text="-" IsEnabled="true" 
                 Command="{Binding DamagePlayer}"
                 CommandParameter="1"/>
 
-        <Button 
+            <Label Text="{Binding Players[1].LifeTotal}" />
+
+            <Button 
                 Text="+" IsEnabled="true" 
                 Command="{Binding HealPlayer}"
                 CommandParameter="1"/>
-
-        <!--<Button x:Name="p2Life" Text="P2 Life" IsEnabled="true" Clicked="p2Life_Clicked" />-->
+        </StackLayout>
 
         <Button Text="Next Beat" Command="{Binding AdvanceToNextBeat}" />
     </StackLayout>
