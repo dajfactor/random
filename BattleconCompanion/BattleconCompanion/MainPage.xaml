@@ -5,12 +5,11 @@
              BackgroundImage="BattleconLogo.png"
              x:Class="BattleconCompanion.MainPage">
 
+    <ContentPage.Resources>
+        <StyleSheet Source="Styles.css" />
+    </ContentPage.Resources>
+    
     <StackLayout>
-        <!--<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />-->
-        
-
         <StackLayout Orientation="Horizontal">
             <Button x:Name="p1Life" 
                 Text="-" IsEnabled="true" 
