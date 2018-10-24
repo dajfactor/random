@@ -15,10 +15,9 @@
 
 
         <StackLayout Orientation="Horizontal">
-            <Label x:Name="p1L" Text="p1l" />
+            <Label Text="{Binding Players[0].LifeTotal}" />
 
-
-            <Label x:Name="p2L" Text="p2l" />
+            <Label Text="{Binding Players[1].LifeTotal}" />
         </StackLayout>
 
 

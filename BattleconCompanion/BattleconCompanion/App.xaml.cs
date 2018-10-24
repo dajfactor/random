@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BattleconCompanion.Models;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,7 @@ namespace BattleconCompanion
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new MainPage(new GameState());
         }
 
         protected override void OnStart()
