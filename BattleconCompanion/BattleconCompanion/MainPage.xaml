@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BattleconCompanion"
+             BackgroundImage="BattleconLogo.png"
+             x:Class="BattleconCompanion.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <!--<Label Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />-->
+        <Button x:Name="p1Life" Text="P1 Life" IsEnabled="true" Clicked="p1Life_Clicked" />
+
+
+
+        <StackLayout Orientation="Horizontal">
+            <Label x:Name="p1L" Text="p1l" />
+
+
+            <Label x:Name="p2L" Text="p2l" />
+        </StackLayout>
+
+
+        <Button x:Name="p2Life" Text="P2 Life" IsEnabled="true" Clicked="p2Life_Clicked" />
+    </StackLayout>
+
+</ContentPage>
