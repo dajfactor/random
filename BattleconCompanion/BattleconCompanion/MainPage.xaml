@@ -6,22 +6,43 @@
              x:Class="BattleconCompanion.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
         <!--<Label Text="Welcome to Xamarin.Forms!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />-->
-        <Button x:Name="p1Life" Text="P1 Life" IsEnabled="true" Clicked="p1Life_Clicked" />
-
-
+        <Button x:Name="p1Life" 
+                Text="-" IsEnabled="true" 
+                Command="{Binding DamagePlayer}"
+                CommandParameter="0"/>
+        
+        <Button 
+                Text="+" IsEnabled="true" 
+                Command="{Binding HealPlayer}"
+                CommandParameter="0"/>
 
         <StackLayout Orientation="Horizontal">
             <Label Text="{Binding Players[0].LifeTotal}" />
 
             <Label Text="{Binding Players[1].LifeTotal}" />
         </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="{Binding Players[0].CurrentForce}" />
 
+            <Label Text="{Binding Players[1].CurrentForce}" />
+        </StackLayout>
 
-        <Button x:Name="p2Life" Text="P2 Life" IsEnabled="true" Clicked="p2Life_Clicked" />
+        <Button x:Name="p2Life" 
+                Text="-" IsEnabled="true" 
+                Command="{Binding DamagePlayer}"
+                CommandParameter="1"/>
+
+        <Button 
+                Text="+" IsEnabled="true" 
+                Command="{Binding HealPlayer}"
+                CommandParameter="1"/>
+
+        <!--<Button x:Name="p2Life" Text="P2 Life" IsEnabled="true" Clicked="p2Life_Clicked" />-->
+
+        <Button Text="Next Beat" Command="{Binding AdvanceToNextBeat}" />
     </StackLayout>
 
 </ContentPage>
